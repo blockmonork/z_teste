@@ -26,14 +26,18 @@
             var tl = aText.length;
             var c = -1;
             var T = setInterval(function() {
-                c++;
-                if (c < tl) {
-                    $('#mainTitle').html($('#mainTitle').html() + " " + aText[c]);
-                } else {
-                    $('#wellDone').text('Well Done!');
-                    clearInterval(T);
-                }
-            }, 1000);
+                    c++;
+                    if (c < tl) {
+                        $('#mainTitle').html($('#mainTitle').html() + " " + aText[c]);
+                    } else {
+                        $('#wellDone').text('Well Done!');
+                        clearInterval(T);
+                        $('#mainTitle').css({
+                            'font-style': 'italic'
+                        })
+                    }
+                },
+                1000);
         })
     </script>
 </body>
